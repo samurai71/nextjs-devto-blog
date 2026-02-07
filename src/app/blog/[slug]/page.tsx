@@ -65,7 +65,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             </div>
 
             <div className="flex flex-wrap gap-2 mb-4">
-              {article.tag_list.map((tag) => (
+              {Array.isArray(article.tag_list) && article.tag_list.map((tag) => (
                 <span
                   key={tag}
                   className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full"
